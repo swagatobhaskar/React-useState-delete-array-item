@@ -14,17 +14,15 @@ export default function App() {
   };
   return (
     <div className="App">
+      <p>{tags.length} items.</p>
       {tags.length > 0 ? (
         tags.map((tag) => (
-          <div>
-            <p>{tags.length} items.</p>
-            <p key={tag}>
-              {tag}{" "}
-              <button style={butStyle} onClick={() => delTag(tag)}>
-                Remove
-              </button>
-            </p>
-          </div>
+          <p key={tag}>
+            {tag}{" "}
+            <button style={butStyle} onClick={() => delTag(tag)}>
+              Remove
+            </button>
+          </p>
         ))
       ) : (
         <h4 style={{ color: "green" }}>Empty array!</h4>
